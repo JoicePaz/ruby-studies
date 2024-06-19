@@ -10,6 +10,7 @@
 
 - Creational
   -  [Abstract Factory](https://github.com/JoicePaz/ruby-studies/tree/main/design-patterns/creational/abstract-factory/blooming-gardens) - Blooming Gardens Scenario.
+  -  [Builder](https://github.com/JoicePaz/ruby-studies/blob/main/design-patterns/creational/builder/restaurant) - Restaurant Scenario.
 
 - Structural
 
