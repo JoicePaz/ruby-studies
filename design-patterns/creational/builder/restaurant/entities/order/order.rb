@@ -12,6 +12,6 @@ class Order
     end
     
     def get_total_price
-        @items.sum(&:price)
+        @items.sum(&:price).round(2)
     end
 end

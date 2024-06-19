@@ -5,7 +5,7 @@ class Menu
         @items = {}
 
         @categories = {
-            "Main Dishes" => ["Chickpeas with curry and Sweet Potatoes", "Gnocchi Pomodoro", "Vegan barbecure al Brazilian"],
+            "Main Dishes" => ["Chickpeas with curry and Sweet Potatoes", "Gnocchi Pomodoro", "Vegan Barbecue al Brazilian"],
             "Side Dishes" => ["White Rice", "Tropean Beans", "Green Salad"],
             "Desserts" => ["Chocolate Mousse", "Chocolate Pudding", "Ice Cream"]
         }

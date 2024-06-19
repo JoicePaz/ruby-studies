@@ -12,29 +12,42 @@ class Restaurant
 
     def take_order
         @base_menu_builder.build_menu
+        builder_class = choose_menu_type
 
-        puts "\nWhat type of menu would you like to choose?"
-        puts "1 - Desserts"
-        puts "2 - Main Dishes"
-        puts "3 - Side Dishes"
-        puts "0 - Exit\n\n"
-
-        choice = gets.chomp.to_i
-
-        builder_class = case choice
-        when 1 then DessertBuilder
-        when 2 then MainCourseBuilder
-        when 3 then SideDishBuilder
-        when 0 then return
-        else
-            puts "\nInvalid option, try again."
-            return
-        end
+        return unless builder_class
 
         builder = builder_class.new(@menu)
         builder.build_menu
+        
+        process_order(builder)
+        builder.finalize_order
+    end
 
-        while true
+    private
+
+    def choose_menu_type
+        loop do
+            puts "\nWhat type of menu would you like to choose?"
+            puts "1 - Desserts"
+            puts "2 - Main Dishes"
+            puts "3 - Side Dishes"
+            puts "0 - Exit\n\n"
+
+            choice = gets.chomp.to_i
+
+            case choice
+            when 1 then return DessertBuilder
+            when 2 then return MainCourseBuilder
+            when 3 then return SideDishBuilder
+            when 0 then return nil
+            else
+                puts "\nInvalid option, please enter a number between 0 and 3."
+            end
+        end
+    end
+
+    def process_order(builder)
+        loop do
             puts "\nEnter the name of the desired item or 'exit' to finish:\n\n"
             item_name = gets.chomp.strip
 
@@ -47,7 +60,5 @@ class Restaurant
                 break if gets.chomp.strip.downcase != "y"
             end
         end
-
-        builder.finalize_order
     end
 end
