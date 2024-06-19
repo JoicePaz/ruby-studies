@@ -17,7 +17,7 @@ class Restaurant
         puts "1 - Desserts"
         puts "2 - Main Dishes"
         puts "3 - Side Dishes"
-        puts "0 - Exit"
+        puts "0 - Exit\n\n"
 
         choice = gets.chomp.to_i
 
@@ -27,7 +27,7 @@ class Restaurant
         when 3 then SideDishBuilder
         when 0 then return
         else
-            puts "Invalid option, try again."
+            puts "\nInvalid option, try again."
             return
         end
 
@@ -35,16 +35,16 @@ class Restaurant
         builder.build_menu
 
         while true
-            puts "\nEnter the name of the desired item or 'exit' to finish:"
+            puts "\nEnter the name of the desired item or 'exit' to finish:\n\n"
             item_name = gets.chomp.strip
 
-            break if item_name == "exit"
+            break if item_name.downcase == "exit"
 
             selected_item = builder.select_item(item_name)
 
             if selected_item
                 puts "\nWould you like to add more items? (Y/N)"
-                next if gets.chomp.strip.downcase != "y"
+                break if gets.chomp.strip.downcase != "y"
             end
         end
 

@@ -8,21 +8,17 @@ class BaseMenuBuilder
 
     def build_menu
         puts "**Categories**"
-
-        @menu.categories.each do |category|
-            puts "\n**#{category}** "
-        end
     end
 
     def select_item(item_name)
         item = @menu.get_item_by_name(item_name)
 
         if item
-            puts "Selected item: #{item.name}"
+            puts "\nSelected item: #{item.name}"
             @order.add_item(item)
             item
         else
-            puts "Item couldn't be found"
+            puts "\nItem couldn't be found"
             nil
         end
     end

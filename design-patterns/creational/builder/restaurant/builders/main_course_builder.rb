@@ -8,7 +8,7 @@ class MainCourseBuilder < BaseMenuBuilder
     def build_menu
       puts "\n**Main Dishes:**"
       @menu.items_in_category("Main Dishes").each do |item|
-        puts "  - #{item.name} - R$#{item.price}"
+        puts "  - #{item}"
       end
     end
   

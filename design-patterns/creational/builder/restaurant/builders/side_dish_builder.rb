@@ -8,7 +8,7 @@ class SideDishBuilder < BaseMenuBuilder
   def build_menu
     puts "\n**Side Dishes:**"
     @menu.items_in_category("Side Dishes").each do |item|
-      puts "  - #{item.name} - R$#{item.price}"
+      puts "  - #{item}"
     end
   end
   
