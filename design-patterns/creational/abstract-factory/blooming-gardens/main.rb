@@ -7,7 +7,6 @@ client1 = Client.new("Alice")
 client2 = Client.new("Charlie")
 client3 = Client.new("Alisson")
 
-
 puts "Wedding Arrangement for Alice:"
 client1.order_arrangement(WeddingFactory.new)
 
