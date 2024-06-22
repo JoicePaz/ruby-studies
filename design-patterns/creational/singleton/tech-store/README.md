@@ -6,11 +6,11 @@
 
 Joice is a software developer who works for an e-commerce company called "Tech Store". Tech Store has an order management system that is accessed by various services and parts of the system, such as processing payments, sending notifications, updating inventory and generating reports.
 
-The system is experiencing performance issues and data inconsistencies. After some investigating, it was discovered that the issue is related to uncontrolled access to a single configuration instance that stores critical information such as API keys, external service URLs, and performance parameters. This information is often read and updated by different threads of execution at the same time, causing concurrency problems.
+The system is experiencing performance issues and data inconsistencies. After some investigation, it was discovered that the issue is related to uncontrolled access to a single configuration instance that stores critical information such as API keys, external service URLs, and performance parameters. This information is often read and updated by different threads of execution at the same time, causing concurrency problems.
 
 #### Problem:
 
-It is need to be ensured that the application configuration is accessed safely by multiple threads, avoiding inconsistencies and improving system performance. To achieve this the Singleton pattern in Ruby is a good solution to ensuring that only a single instance of the configuration class is created and that access to that instance is thread-safe.
+It is needed to ensure that the application configuration is accessed safely by multiple threads, avoiding inconsistencies and improving system performance. To achieve this the Singleton pattern is a good solution, it to ensures that only a single instance of the configuration class is created and the access to that instance is thread-safe.
 
 #### How to Run the File:
 
