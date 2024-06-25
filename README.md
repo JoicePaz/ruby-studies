@@ -14,6 +14,7 @@
   -  [Singleton](https://github.com/JoicePaz/ruby-studies/tree/main/design-patterns/creational/singleton/tech-store) - Tech Store Scenario.
 
 - Structural
+    -  [Decorator](https://github.com/JoicePaz/ruby-studies/tree/main/design-patterns/structural/decorator/bliss-cafe) - Bliss Café Scenario.
 
 - Behavioral
 
