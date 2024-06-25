@@ -1,4 +1,4 @@
-# Thread Safe Singleton Implementation 
+# Decorator Implementation 
 ## Bliss Café Scenario
 
 
@@ -18,11 +18,20 @@ Navigate to the folder containing the `main.rb` file. Execute the following comm
 
 #### Explanation
 
-- `coffee.rb`: Defines the base Coffee class and a simple Coffee implementation.
-- `coffee_decorator.rb`: Defines the base Decorator class for adding customizations to the coffee.
-- `milk.rb`: Contains the MilkDecorator class, which adds different types of milk to the coffee.
-- `flavor.rb`: Contains the FlavorDecorator class, which adds different flavors to the coffee.
-- `topping.rb`: Contains the ToppingDecorator class, which adds different toppings to the coffee.
-- `discount.rb`: Contains the DiscountDecorator class, which applies discounts to the coffee.
-- `sugar.rb`: Contains the SugarDecorator class, which adds different amounts of sugar to the coffee.
-- `main.rb`: The main file to run the application, demonstrating a real-world example of customizing a coffee order.
+### Project Structure
+- `entities/`: Directory containing the main entities of the system.
+    - `coffee.rb`: Defines the Coffee class representing a coffee order.
+- `decorators/`: Directory for implementing the Decorator pattern for adding functionalities to coffee orders.
+    - `coffee_decorator.rb`: Base decorator class for coffee.
+    - `milk_decorator.rb`: Decorator for adding regular type of milk.
+    - `almond_milk_decorator.rb`: Decorator for adding almond type of milk.
+    - `soy_milk_decorator.rb`: Decorator for adding soy type of milk.
+    - `flavor_decorator.rb`: Decorator for adding flavors to coffee.
+    - `topping_decorator.rb`: Decorator for adding toppings to coffee.
+    - `discount_decorator.rb`: Decorator for applying discounts based on order cost.
+    - `sugar_decorator.rb`: Decorator for adding sugar to coffee.  
+- `enums/`: Directory containing enumerations used in the system.
+    - `coffee_size.rb`: Enum for defining coffee sizes (small, medium, large).
+    - `milk_type.rb`: Enum for defining types of milk (none, regular, soy, almond).
+    - `topping_type.rb`: Enum for defining types of toppings (strawberry, caramel, mint, orange) with respective costs.  
+- `main.rb`: Main script where the coffee ordering process is orchestrated. It handles user input, validates choices, and applies decorators accordingly.
