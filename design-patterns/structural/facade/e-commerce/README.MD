@@ -16,8 +16,7 @@ The goal is to provide a simplified API to process an order that involves checki
 #### How to Run the File:
 
 1. Install dependencies:
-  ```bash
-  bundle install
+  `bundle install`
 2. Start the server:
   `ruby config/routes.rb`
 3. Create an order using Postman:
