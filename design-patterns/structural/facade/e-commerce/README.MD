@@ -16,18 +16,24 @@ The goal is to provide a simplified API to process an order that involves checki
 #### How to Run the File:
 
 1. Install dependencies:
-  `bundle install`
+    ```sh
+    bundle install
+    ```
 2. Start the server:
-  `ruby config/routes.rb`
+  ```sh
+    ruby config/routes.rb
+    ```
 3. Create an order using Postman:
-  `URL: http://localhost:4567/orders`
-  `Method: POST`
-  `Body (JSON)`
-  {
-    "product_id": "123",
-    "quantity": 1,
-    "customer_id": "456"
-  }
+  - **URL:** `http://localhost:4567/orders`
+  - **Method:** `POST`
+  - **Body (JSON):**
+  ```json
+      {
+        "product_id": "123",
+        "quantity": 1,
+        "customer_id": "456"
+      }
+      ```
 
 #### Explanation
 
